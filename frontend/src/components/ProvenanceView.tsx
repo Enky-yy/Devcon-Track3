@@ -112,7 +112,7 @@ export const ProvenanceView: React.FC = () => {
       {/* DAG Lineage Visualizer */}
       <div className="glass-card" style={{ padding: '24px', marginBottom: '32px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-          <GitBranch size={20} color="#60a5fa" />
+          <GitBranch size={20} color="#f4f4f5" />
           <h3 style={{ fontSize: '1.2rem', fontWeight: 700 }}>Lineage Version DAG (Directed Acyclic Graph)</h3>
         </div>
 
@@ -124,8 +124,8 @@ export const ProvenanceView: React.FC = () => {
               <React.Fragment key={art.artifactHash}>
                 <div
                   style={{
-                    background: 'rgba(14, 19, 31, 0.9)',
-                    border: '1px solid rgba(59, 130, 246, 0.28)',
+                    background: 'rgba(18, 18, 22, 0.85)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
                     borderRadius: '12px',
                     padding: '16px 20px',
                     minWidth: '280px',
@@ -137,7 +137,7 @@ export const ProvenanceView: React.FC = () => {
                     <span style={{ fontSize: '0.75rem', color: '#64748b' }}>{art.timestamp.slice(0, 10)}</span>
                   </div>
                   <h4 style={{ fontSize: '0.95rem', fontWeight: 700, marginBottom: '6px' }}>{art.title}</h4>
-                  <div className="mono" style={{ fontSize: '0.72rem', color: '#60a5fa', marginBottom: '4px' }}>
+                  <div className="mono" style={{ fontSize: '0.72rem', color: '#e4e4e7', marginBottom: '4px' }}>
                     Hash: {art.artifactHash.slice(0, 14)}...
                   </div>
                   <div className="mono" style={{ fontSize: '0.7rem', color: '#64748b' }}>
@@ -189,14 +189,14 @@ export const ProvenanceView: React.FC = () => {
             </div>
 
             {/* Hashes Banner */}
-            <div style={{ background: 'rgba(10, 14, 25, 0.7)', border: '1px solid rgba(255, 255, 255, 0.05)', borderRadius: '10px', padding: '12px 16px', marginBottom: '18px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px', fontSize: '0.8rem' }}>
+            <div style={{ background: 'rgba(18, 18, 22, 0.8)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '10px', padding: '12px 16px', marginBottom: '18px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '12px', fontSize: '0.8rem' }}>
               <div>
                 <span style={{ color: '#64748b' }}>Artifact Content Hash: </span>
-                <span className="mono" style={{ color: '#60a5fa' }}>{art.artifactHash}</span>
+                <span className="mono" style={{ color: '#e4e4e7' }}>{art.artifactHash}</span>
               </div>
               <div>
                 <span style={{ color: '#64748b' }}>Parent Lineage Pointer: </span>
-                <span className="mono" style={{ color: art.parentHash === ethers.ZeroHash ? '#10b981' : '#a5b4fc' }}>
+                <span className="mono" style={{ color: art.parentHash === ethers.ZeroHash ? '#10b981' : '#a1a1aa' }}>
                   {art.parentHash === ethers.ZeroHash ? 'Genesis (Root)' : art.parentHash}
                 </span>
               </div>
@@ -219,7 +219,7 @@ export const ProvenanceView: React.FC = () => {
                     <div
                       key={idx}
                       style={{
-                        background: 'rgba(14, 19, 31, 0.5)',
+                        background: 'rgba(18, 18, 22, 0.6)',
                         border: '1px solid rgba(16, 185, 129, 0.2)',
                         borderRadius: '10px',
                         padding: '12px',
@@ -251,7 +251,7 @@ export const ProvenanceView: React.FC = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ padding: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <FileText size={20} color="#60a5fa" />
+                <FileText size={20} color="#f4f4f5" />
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Register Digital Artifact</h3>
               </div>
               <button onClick={() => setShowRegisterModal(false)} style={{ background: 'transparent', border: 'none', color: '#64748b', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>

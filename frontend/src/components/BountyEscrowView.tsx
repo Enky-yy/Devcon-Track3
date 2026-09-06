@@ -193,25 +193,25 @@ export const BountyEscrowView: React.FC = () => {
       </div>
 
       {/* Streaming Payroll Real-Time Ticker */}
-      <div className="glass-card" style={{ padding: '24px', marginBottom: '28px', background: 'linear-gradient(135deg, rgba(14, 19, 31, 0.95) 0%, rgba(20, 27, 44, 0.7) 100%)' }}>
+      <div className="glass-card" style={{ padding: '24px', marginBottom: '28px', background: 'linear-gradient(135deg, rgba(18, 18, 22, 0.95) 0%, rgba(26, 26, 32, 0.7) 100%)' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-              <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 8px rgba(16, 185, 129, 0.6)' }}></span>
-              <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#60a5fa', textTransform: 'uppercase' }}>Active Streaming Payroll</span>
+              <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: '#22c55e', boxShadow: '0 0 8px rgba(34, 197, 94, 0.6)' }}></span>
+              <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#e4e4e7', textTransform: 'uppercase' }}>Active Streaming Payroll</span>
             </div>
             <div style={{ fontSize: '1.2rem', fontWeight: 700 }}>
               Continuous Salary Stream: 0xresearcher.eth (Core Protocol Research)
             </div>
-            <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginTop: '2px' }}>
+            <div style={{ fontSize: '0.85rem', color: '#a1a1aa', marginTop: '2px' }}>
               Funded by DAO Treasury • Rate: 0.18 ETH / hour (linear per-second unlock)
             </div>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <div style={{ textAlign: 'right' }}>
-              <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Accrued & Claimable:</div>
-              <div className="mono" style={{ fontSize: '1.5rem', fontWeight: 800, color: '#34d399' }}>
+              <div style={{ fontSize: '0.75rem', color: '#71717a' }}>Accrued & Claimable:</div>
+              <div className="mono" style={{ fontSize: '1.5rem', fontWeight: 800, color: '#4ade80' }}>
                 {streamAccrued.toFixed(5)} ETH
               </div>
             </div>
@@ -232,10 +232,10 @@ export const BountyEscrowView: React.FC = () => {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Users size={20} color="#60a5fa" />
+              <Users size={20} color="#f4f4f5" />
               <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Multi-Party Expense Sharing Pools</h3>
             </div>
-            <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '2px' }}>
+            <p style={{ color: '#a1a1aa', fontSize: '0.85rem', marginTop: '2px' }}>
               Trustless collaborative reimbursement: working groups submit receipts, and contract automatically splits funds across payees upon multi-sig approval.
             </p>
           </div>
@@ -246,9 +246,9 @@ export const BountyEscrowView: React.FC = () => {
             <div
               key={pool.id}
               style={{
-                background: 'rgba(10, 14, 25, 0.7)',
-                border: `1px solid ${pool.disbursed ? 'rgba(16, 185, 129, 0.3)' : 'rgba(59, 130, 246, 0.25)'}`,
-                borderRadius: '12px',
+                background: 'rgba(18, 18, 22, 0.8)',
+                border: `1px solid ${pool.disbursed ? 'rgba(34, 197, 94, 0.3)' : 'rgba(255, 255, 255, 0.12)'}`,
+                borderRadius: '10px',
                 padding: '18px',
                 display: 'flex',
                 flexDirection: 'column',
@@ -257,7 +257,7 @@ export const BountyEscrowView: React.FC = () => {
             >
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                  <span className="mono" style={{ fontSize: '0.75rem', color: '#64748b' }}>POOL #{pool.id}</span>
+                  <span className="mono" style={{ fontSize: '0.75rem', color: '#71717a' }}>POOL #{pool.id}</span>
                   {pool.disbursed ? (
                     <span className="badge badge-emerald">Disbursed</span>
                   ) : (
@@ -266,21 +266,21 @@ export const BountyEscrowView: React.FC = () => {
                 </div>
 
                 <h4 style={{ fontSize: '1.05rem', fontWeight: 700, marginBottom: '6px' }}>{pool.title}</h4>
-                <div className="mono" style={{ fontSize: '1.1rem', fontWeight: 800, color: '#60a5fa', marginBottom: '10px' }}>
+                <div className="mono" style={{ fontSize: '1.1rem', fontWeight: 800, color: '#f4f4f5', marginBottom: '10px' }}>
                   Total: {pool.totalFunded}
                 </div>
 
-                <div style={{ background: 'rgba(0,0,0,0.35)', padding: '8px', borderRadius: '8px', fontSize: '0.75rem', marginBottom: '12px' }}>
-                  <span style={{ color: '#64748b' }}>Receipts Hash: </span>
-                  <span className="mono" style={{ color: '#a5b4fc' }}>{pool.receiptHash.slice(0, 24)}...</span>
+                <div style={{ background: 'rgba(0,0,0,0.4)', padding: '8px', borderRadius: '8px', fontSize: '0.75rem', marginBottom: '12px' }}>
+                  <span style={{ color: '#71717a' }}>Receipts Hash: </span>
+                  <span className="mono" style={{ color: '#e4e4e7' }}>{pool.receiptHash.slice(0, 24)}...</span>
                 </div>
 
                 <div style={{ fontSize: '0.8rem', marginBottom: '14px' }}>
-                  <div style={{ color: '#94a3b8', fontWeight: 600, marginBottom: '6px' }}>Payee Pro-Rata Split:</div>
+                  <div style={{ color: '#a1a1aa', fontWeight: 600, marginBottom: '6px' }}>Payee Pro-Rata Split:</div>
                   {pool.payees.map((p, i) => (
                     <div key={i} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px', fontSize: '0.78rem' }}>
-                      <span style={{ color: '#cbd5e1' }}>{p.name}</span>
-                      <span className="mono" style={{ color: '#34d399', fontWeight: 600 }}>{p.amount} ({p.shareBps / 100}%)</span>
+                      <span style={{ color: '#d4d4d8' }}>{p.name}</span>
+                      <span className="mono" style={{ color: '#4ade80', fontWeight: 600 }}>{p.amount} ({p.shareBps / 100}%)</span>
                     </div>
                   ))}
                 </div>
@@ -318,18 +318,18 @@ export const BountyEscrowView: React.FC = () => {
             <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '18px', flexWrap: 'wrap', gap: '12px' }}>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '6px' }}>
-                  <span className="mono" style={{ color: '#60a5fa', fontWeight: 700 }}>Project #{proj.id}</span>
+                  <span className="mono" style={{ color: '#f4f4f5', fontWeight: 700 }}>Project #{proj.id}</span>
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>{proj.title}</h3>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '0.8rem', color: '#94a3b8' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '0.8rem', color: '#a1a1aa' }}>
                   <span>Client: <strong style={{ color: '#f8fafc' }}>{proj.client.slice(0, 6)}...{proj.client.slice(-4)}</strong></span>
-                  <span>Contributor: <strong style={{ color: '#60a5fa' }}>{proj.contributor.slice(0, 6)}...{proj.contributor.slice(-4)}</strong></span>
+                  <span>Contributor: <strong style={{ color: '#f4f4f5' }}>{proj.contributor.slice(0, 6)}...{proj.contributor.slice(-4)}</strong></span>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <div style={{ textAlign: 'right' }}>
-                  <div style={{ fontSize: '0.75rem', color: '#64748b' }}>Escrow Balance:</div>
+                  <div style={{ fontSize: '0.75rem', color: '#71717a' }}>Escrow Balance:</div>
                   <div className="mono" style={{ fontSize: '1.1rem', fontWeight: 700, color: '#f8fafc' }}>
                     {proj.remainingFunds} / {proj.totalFunded}
                   </div>
@@ -348,9 +348,9 @@ export const BountyEscrowView: React.FC = () => {
                   <div
                     key={idx}
                     style={{
-                      background: isReleased ? 'rgba(16, 185, 129, 0.05)' : isSubmitted ? 'rgba(59, 130, 246, 0.05)' : 'rgba(14, 19, 31, 0.6)',
-                      border: `1px solid ${isReleased ? 'rgba(16, 185, 129, 0.3)' : isSubmitted ? 'rgba(59, 130, 246, 0.3)' : 'rgba(255, 255, 255, 0.06)'}`,
-                      borderRadius: '12px',
+                      background: isReleased ? 'rgba(34, 197, 94, 0.05)' : isSubmitted ? 'rgba(255, 255, 255, 0.05)' : 'rgba(18, 18, 22, 0.7)',
+                      border: `1px solid ${isReleased ? 'rgba(34, 197, 94, 0.3)' : isSubmitted ? 'rgba(255, 255, 255, 0.2)' : 'rgba(255, 255, 255, 0.06)'}`,
+                      borderRadius: '10px',
                       padding: '16px',
                       display: 'flex',
                       flexDirection: 'column',
@@ -359,34 +359,34 @@ export const BountyEscrowView: React.FC = () => {
                   >
                     <div>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b' }}>MILESTONE {idx + 1}</span>
+                        <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#71717a' }}>MILESTONE {idx + 1}</span>
                         {isReleased && <span className="badge badge-emerald">Released</span>}
-                        {isSubmitted && <span className="badge badge-blue">Submitted</span>}
+                        {isSubmitted && <span className="badge badge-neutral">Submitted</span>}
                         {isInProgress && <span className="badge badge-amber">In Progress</span>}
                         {m.status === 'Pending' && <span className="badge badge-neutral">Pending</span>}
                       </div>
 
                       <h4 style={{ fontSize: '0.95rem', fontWeight: 600, marginBottom: '6px' }}>{m.title}</h4>
-                      <div className="mono" style={{ fontSize: '0.85rem', fontWeight: 700, color: '#60a5fa', marginBottom: '8px' }}>
+                      <div className="mono" style={{ fontSize: '0.85rem', fontWeight: 700, color: '#f4f4f5', marginBottom: '8px' }}>
                         {m.amount}
                       </div>
 
                       {m.deliverableHash && (
-                        <div style={{ background: 'rgba(0,0,0,0.35)', padding: '6px 8px', borderRadius: '6px', fontSize: '0.72rem', marginBottom: '8px' }}>
-                          <span style={{ color: '#64748b' }}>Proof Hash: </span>
-                          <span className="mono" style={{ color: '#34d399' }}>{m.deliverableHash.slice(0, 16)}...</span>
+                        <div style={{ background: 'rgba(0,0,0,0.4)', padding: '6px 8px', borderRadius: '6px', fontSize: '0.72rem', marginBottom: '8px' }}>
+                          <span style={{ color: '#71717a' }}>Proof Hash: </span>
+                          <span className="mono" style={{ color: '#4ade80' }}>{m.deliverableHash.slice(0, 16)}...</span>
                         </div>
                       )}
 
                       {m.notes && (
-                        <p style={{ fontSize: '0.75rem', color: '#94a3b8', fontStyle: 'italic', marginBottom: '8px' }}>
+                        <p style={{ fontSize: '0.75rem', color: '#a1a1aa', fontStyle: 'italic', marginBottom: '8px' }}>
                           "{m.notes}"
                         </p>
                       )}
                     </div>
 
                     <div style={{ paddingTop: '10px', borderTop: '1px solid rgba(255,255,255,0.04)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                      <span style={{ fontSize: '0.72rem', color: '#64748b' }}>Due: {m.deadline}</span>
+                      <span style={{ fontSize: '0.72rem', color: '#71717a' }}>Due: {m.deadline}</span>
 
                       {(m.status === 'Pending' || isInProgress) && (
                         <button
@@ -431,15 +431,15 @@ export const BountyEscrowView: React.FC = () => {
           <div key={b.id} className="glass-card" style={{ padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
-                <span className="badge badge-indigo">{b.requiredRole}</span>
-                {b.status === 'Open' && <span className="badge badge-blue">Open</span>}
+                <span className="badge badge-neutral">{b.requiredRole}</span>
+                {b.status === 'Open' && <span className="badge badge-neutral">Open</span>}
                 {b.status === 'Claimed' && <span className="badge badge-amber">Claimed</span>}
-                {b.status === 'Submitted' && <span className="badge badge-indigo">Proof Submitted</span>}
+                {b.status === 'Submitted' && <span className="badge badge-neutral">Proof Submitted</span>}
                 {b.status === 'Completed' && <span className="badge badge-emerald">Completed</span>}
               </div>
 
               <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '8px' }}>{b.title}</h4>
-              <div className="mono" style={{ fontSize: '1.1rem', fontWeight: 800, color: '#60a5fa', marginBottom: '12px' }}>
+              <div className="mono" style={{ fontSize: '1.1rem', fontWeight: 800, color: '#f4f4f5', marginBottom: '12px' }}>
                 {b.rewardAmount}
               </div>
 
@@ -497,7 +497,7 @@ export const BountyEscrowView: React.FC = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ padding: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Receipt size={20} color="#60a5fa" />
+                <Receipt size={20} color="#f4f4f5" />
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Create Shared Expense Pool</h3>
               </div>
               <button onClick={() => setShowExpenseModal(false)} style={{ background: 'transparent', border: 'none', color: '#64748b', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>
@@ -535,15 +535,15 @@ export const BountyEscrowView: React.FC = () => {
               />
             </div>
 
-            <div style={{ background: 'rgba(14, 19, 31, 0.7)', padding: '12px', borderRadius: '8px', marginBottom: '20px', fontSize: '0.8rem' }}>
-              <div style={{ color: '#94a3b8', fontWeight: 600, marginBottom: '4px' }}>Automated Payee Distribution:</div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1' }}>
+            <div style={{ background: 'rgba(18, 18, 22, 0.8)', padding: '12px', borderRadius: '8px', marginBottom: '20px', fontSize: '0.8rem' }}>
+              <div style={{ color: '#a1a1aa', fontWeight: 600, marginBottom: '4px' }}>Automated Payee Distribution:</div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', color: '#d4d4d8' }}>
                 <span>0xresearcher.eth (60% share)</span>
-                <span className="mono" style={{ color: '#60a5fa' }}>{parseFloat(expenseAmount || '0') * 0.6} ETH</span>
+                <span className="mono" style={{ color: '#f4f4f5' }}>{parseFloat(expenseAmount || '0') * 0.6} ETH</span>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', color: '#cbd5e1', marginTop: '4px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', color: '#d4d4d8', marginTop: '4px' }}>
                 <span>auditor-charlie.eth (40% share)</span>
-                <span className="mono" style={{ color: '#60a5fa' }}>{parseFloat(expenseAmount || '0') * 0.4} ETH</span>
+                <span className="mono" style={{ color: '#f4f4f5' }}>{parseFloat(expenseAmount || '0') * 0.4} ETH</span>
               </div>
             </div>
 
@@ -563,13 +563,13 @@ export const BountyEscrowView: React.FC = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ padding: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <UploadCloud size={20} color="#60a5fa" />
+                <UploadCloud size={20} color="#f4f4f5" />
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Submit Milestone Deliverable</h3>
               </div>
-              <button onClick={() => setActiveProject(null)} style={{ background: 'transparent', border: 'none', color: '#64748b', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>
+              <button onClick={() => setActiveProject(null)} style={{ background: 'transparent', border: 'none', color: '#71717a', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>
             </div>
 
-            <div style={{ fontSize: '0.9rem', color: '#94a3b8', marginBottom: '16px' }}>
+            <div style={{ fontSize: '0.9rem', color: '#a1a1aa', marginBottom: '16px' }}>
               Submitting for: <strong style={{ color: '#f8fafc' }}>{activeProject.milestones[activeMilestoneIdx].title}</strong> ({activeProject.milestones[activeMilestoneIdx].amount})
             </div>
 
@@ -587,7 +587,7 @@ export const BountyEscrowView: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setDeliverableHash('sha256:' + Array.from({length: 64}, () => Math.floor(Math.random()*16).toString(16)).join(''))}
-                style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.75rem', cursor: 'pointer', marginTop: '4px' }}
+                style={{ background: 'transparent', border: 'none', color: '#f4f4f5', fontSize: '0.75rem', cursor: 'pointer', marginTop: '4px' }}
               >
                 + Auto-generate mock SHA-256 deliverable hash
               </button>

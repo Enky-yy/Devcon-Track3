@@ -112,8 +112,8 @@ export const TransparencyView: React.FC = () => {
             <div
               key={idx}
               style={{
-                background: 'rgba(11, 17, 32, 0.7)',
-                border: '1px solid rgba(168, 85, 247, 0.3)',
+                background: 'rgba(18, 18, 22, 0.8)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
                 borderRadius: '12px',
                 padding: '16px',
               }}
@@ -129,7 +129,7 @@ export const TransparencyView: React.FC = () => {
               <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#f8fafc', marginBottom: '4px' }}>
                 {att.identityClaim}
               </div>
-              <div style={{ fontSize: '0.8rem', color: '#60a5fa', marginBottom: '8px', fontWeight: 600 }}>
+              <div style={{ fontSize: '0.8rem', color: '#e4e4e7', marginBottom: '8px', fontWeight: 600 }}>
                 Role: {att.role}
               </div>
 
@@ -150,7 +150,7 @@ export const TransparencyView: React.FC = () => {
       <div className="glass-card" style={{ padding: '24px', marginBottom: '30px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <Layers size={22} color="#60a5fa" />
+            <Layers size={22} color="#f4f4f5" />
             <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Committed Checkpoint #1: DAO Working Group Deliverables Q3</h3>
           </div>
           <span className="badge badge-emerald" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
@@ -158,17 +158,17 @@ export const TransparencyView: React.FC = () => {
           </span>
         </div>
 
-        <div style={{ background: 'rgba(10, 14, 25, 0.8)', border: '1px solid rgba(255, 255, 255, 0.05)', borderRadius: '12px', padding: '16px', marginBottom: '20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px', fontSize: '0.85rem' }}>
+        <div style={{ background: 'rgba(18, 18, 22, 0.8)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '12px', padding: '16px', marginBottom: '20px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px', fontSize: '0.85rem' }}>
           <div>
             <span style={{ color: '#64748b' }}>On-Chain Merkle Root:</span>
-            <div className="mono" style={{ color: '#60a5fa', fontWeight: 700, wordBreak: 'break-all', marginTop: '4px' }}>
+            <div className="mono" style={{ color: '#f4f4f5', fontWeight: 700, wordBreak: 'break-all', marginTop: '4px' }}>
               {INITIAL_MERKLE_TREE.root}
             </div>
           </div>
           <div>
             <span style={{ color: '#64748b' }}>Batch Size & Snapshot:</span>
             <div style={{ marginTop: '4px', color: '#f8fafc' }}>
-              4 Verified Leaves • <a href="#snapshot" style={{ color: '#a5b4fc', textDecoration: 'none' }}>ipfs://bafybeibatcharchive...</a>
+              4 Verified Leaves • <a href="#snapshot" style={{ color: '#e4e4e7', textDecoration: 'none' }}>ipfs://bafybeibatcharchive...</a>
             </div>
           </div>
         </div>
@@ -191,8 +191,8 @@ export const TransparencyView: React.FC = () => {
                   setVerificationResult('success');
                 }}
                 style={{
-                  background: isSelected ? 'rgba(59, 130, 246, 0.14)' : 'rgba(14, 19, 31, 0.55)',
-                  border: isSelected ? '2px solid #3b82f6' : '1px solid rgba(255, 255, 255, 0.06)',
+                  background: isSelected ? 'rgba(255, 255, 255, 0.1)' : 'rgba(18, 18, 22, 0.6)',
+                  border: isSelected ? '2px solid #ffffff' : '1px solid rgba(255, 255, 255, 0.08)',
                   borderRadius: '10px',
                   padding: '14px',
                   cursor: 'pointer',
@@ -215,7 +215,7 @@ export const TransparencyView: React.FC = () => {
         </div>
 
         {/* Proof Inspector and Verifier */}
-        <div style={{ background: 'rgba(11, 17, 32, 0.9)', border: '1px solid rgba(56, 189, 248, 0.25)', borderRadius: '14px', padding: '20px' }}>
+        <div style={{ background: 'rgba(18, 18, 22, 0.9)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '14px', padding: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
             <div>
               <h4 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Cryptographic Proof Inspector</h4>
@@ -266,7 +266,7 @@ export const TransparencyView: React.FC = () => {
               Proof Path Siblings ({currentProof.length} steps):
             </div>
             {currentProof.map((sibling, i) => (
-              <div key={i} className="mono" style={{ background: 'rgba(0,0,0,0.4)', padding: '6px 12px', borderRadius: '6px', fontSize: '0.75rem', color: '#a5b4fc', marginBottom: '4px' }}>
+              <div key={i} className="mono" style={{ background: 'rgba(0,0,0,0.4)', padding: '6px 12px', borderRadius: '6px', fontSize: '0.75rem', color: '#e4e4e7', marginBottom: '4px' }}>
                 Proof[{i}]: {sibling}
               </div>
             ))}
@@ -295,7 +295,7 @@ export const TransparencyView: React.FC = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ padding: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <ShieldCheck size={20} color="#60a5fa" />
+                <ShieldCheck size={20} color="#f4f4f5" />
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Keyless OIDC Deliverable Sign-Off</h3>
               </div>
               <button onClick={() => setShowOidcModal(false)} style={{ background: 'transparent', border: 'none', color: '#64748b', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>
@@ -312,8 +312,8 @@ export const TransparencyView: React.FC = () => {
                   type="button"
                   onClick={() => setOidcProvider('github')}
                   style={{
-                    background: oidcProvider === 'github' ? 'rgba(59, 130, 246, 0.18)' : 'rgba(14, 19, 31, 0.6)',
-                    border: oidcProvider === 'github' ? '2px solid #3b82f6' : '1px solid rgba(255, 255, 255, 0.1)',
+                    background: oidcProvider === 'github' ? 'rgba(255, 255, 255, 0.12)' : 'rgba(18, 18, 22, 0.6)',
+                    border: oidcProvider === 'github' ? '2px solid #ffffff' : '1px solid rgba(255, 255, 255, 0.1)',
                     color: '#ffffff',
                     padding: '10px',
                     borderRadius: '8px',
@@ -331,8 +331,8 @@ export const TransparencyView: React.FC = () => {
                   type="button"
                   onClick={() => setOidcProvider('google')}
                   style={{
-                    background: oidcProvider === 'google' ? 'rgba(59, 130, 246, 0.18)' : 'rgba(14, 19, 31, 0.6)',
-                    border: oidcProvider === 'google' ? '2px solid #3b82f6' : '1px solid rgba(255, 255, 255, 0.1)',
+                    background: oidcProvider === 'google' ? 'rgba(255, 255, 255, 0.12)' : 'rgba(18, 18, 22, 0.6)',
+                    border: oidcProvider === 'google' ? '2px solid #ffffff' : '1px solid rgba(255, 255, 255, 0.1)',
                     color: '#ffffff',
                     padding: '10px',
                     borderRadius: '8px',

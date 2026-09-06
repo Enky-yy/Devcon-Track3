@@ -68,7 +68,7 @@ export const AnalyticsView: React.FC = () => {
               <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)', color: '#94a3b8', textAlign: 'left' }}>
                 <th style={{ padding: '12px 16px' }}>Vulnerability Vector</th>
                 <th style={{ padding: '12px 16px' }}>Status Quo (Snapshot / Discord)</th>
-                <th style={{ padding: '12px 16px', color: '#60a5fa' }}>Axiom Protocol Architecture</th>
+                <th style={{ padding: '12px 16px', color: '#f4f4f5' }}>Axiom Protocol Architecture</th>
                 <th style={{ padding: '12px 16px' }}>Guarantee</th>
               </tr>
             </thead>
@@ -125,7 +125,7 @@ export const AnalyticsView: React.FC = () => {
       {/* Verified Smart Contract Deployments */}
       <div className="glass-card" style={{ padding: '24px' }}>
         <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <Terminal size={20} color="#60a5fa" /> Verified Deployed Smart Contracts (Localhost / Testnet)
+          <Terminal size={20} color="#f4f4f5" /> Verified Deployed Smart Contracts (Localhost / Testnet)
         </h3>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '14px' }}>
@@ -133,8 +133,8 @@ export const AnalyticsView: React.FC = () => {
             <div
               key={name}
               style={{
-                background: 'rgba(10, 14, 25, 0.75)',
-                border: '1px solid rgba(255, 255, 255, 0.06)',
+                background: 'rgba(18, 18, 22, 0.8)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: '10px',
                 padding: '14px',
               }}
@@ -142,7 +142,7 @@ export const AnalyticsView: React.FC = () => {
               <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#f8fafc', marginBottom: '4px' }}>
                 {name}
               </div>
-              <div className="mono" style={{ fontSize: '0.78rem', color: '#60a5fa', wordBreak: 'break-all' }}>
+              <div className="mono" style={{ fontSize: '0.78rem', color: '#e4e4e7', wordBreak: 'break-all' }}>
                 {addr}
               </div>
               <div style={{ fontSize: '0.72rem', color: '#10b981', marginTop: '6px', display: 'flex', alignItems: 'center', gap: '4px' }}>

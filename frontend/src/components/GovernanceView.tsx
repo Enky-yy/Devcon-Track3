@@ -173,7 +173,7 @@ export const GovernanceView: React.FC = () => {
     <div style={{ padding: '30px 24px', maxWidth: '1400px', margin: '0 auto' }}>
       {/* Hero & Rationale */}
       <div className="glass-card" style={{ padding: '28px', marginBottom: '28px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '220px', height: '220px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
+        <div style={{ position: 'absolute', top: '-60px', right: '-60px', width: '220px', height: '220px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%)', pointerEvents: 'none' }}></div>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap' }}>
           <div style={{ maxWidth: '850px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
@@ -202,17 +202,17 @@ export const GovernanceView: React.FC = () => {
         </div>
 
         {/* Live Mathematical Formula Banner */}
-        <div style={{ marginTop: '20px', background: 'rgba(14, 19, 31, 0.8)', border: '1px solid rgba(255, 255, 255, 0.07)', borderRadius: '10px', padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '15px' }}>
+        <div style={{ marginTop: '20px', background: 'rgba(24, 24, 28, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '10px', padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '15px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
             <span style={{ fontSize: '1.2rem' }}>📐</span>
             <div>
-              <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#e2e8f0' }}>Quadratic Voting & MACI Math in EVM:</div>
-              <div className="mono" style={{ fontSize: '0.8rem', color: '#60a5fa' }}>
+              <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#f4f4f5' }}>Quadratic Voting & MACI Math in EVM:</div>
+              <div className="mono" style={{ fontSize: '0.8rem', color: '#e4e4e7' }}>
                 EffectiveVotes = ⌊√Tokens⌋ &nbsp;|&nbsp; 4 voters × 100 credits = 40 votes &gt; 1 whale × 400 credits = 20 votes!
               </div>
             </div>
           </div>
-          <div style={{ fontSize: '0.8rem', color: '#10b981', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div style={{ fontSize: '0.8rem', color: '#4ade80', display: 'flex', alignItems: 'center', gap: '6px' }}>
             <CheckCircle size={15} /> MACI Coercion Resistance: Active
           </div>
         </div>
@@ -233,8 +233,8 @@ export const GovernanceView: React.FC = () => {
                 {/* Header info */}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span className="mono" style={{ color: '#60a5fa', fontWeight: 700, fontSize: '0.85rem' }}>AIP-{prop.id}</span>
-                    <span className="badge badge-indigo" style={{ fontSize: '0.7rem' }}>{prop.category}</span>
+                    <span className="mono" style={{ color: '#f4f4f5', fontWeight: 700, fontSize: '0.85rem' }}>AIP-{prop.id}</span>
+                    <span className="badge badge-neutral" style={{ fontSize: '0.7rem' }}>{prop.category}</span>
                   </div>
 
                   {liveState === 'CommitPhase' && (
@@ -243,31 +243,31 @@ export const GovernanceView: React.FC = () => {
                     </span>
                   )}
                   {liveState === 'RevealPhase' && (
-                    <span className="badge badge-cyan" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                    <span className="badge badge-neutral" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                       <Unlock size={12} /> Reveal Phase
                     </span>
                   )}
                   {liveState === 'Passed' && <span className="badge badge-emerald">Passed</span>}
                   {liveState === 'Executed' && <span className="badge badge-emerald">Executed</span>}
-                  {liveState === 'Defeated' && <span className="badge" style={{ background: 'rgba(244, 63, 94, 0.15)', color: '#f43f5e' }}>Defeated</span>}
+                  {liveState === 'Defeated' && <span className="badge" style={{ background: 'rgba(244, 63, 94, 0.12)', color: '#fda4af', border: '1px solid rgba(244, 63, 94, 0.25)' }}>Defeated</span>}
                 </div>
 
                 <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '10px', lineHeight: '1.4' }}>
                   {prop.title}
                 </h3>
-                <p style={{ color: '#94a3b8', fontSize: '0.875rem', lineHeight: '1.6', marginBottom: '18px' }}>
+                <p style={{ color: '#a1a1aa', fontSize: '0.875rem', lineHeight: '1.6', marginBottom: '18px' }}>
                   {prop.summary}
                 </p>
 
                 {/* Secret Ballot Status Banner */}
                 {liveState === 'CommitPhase' && (
-                  <div style={{ background: 'rgba(245, 158, 11, 0.08)', border: '1px solid rgba(245, 158, 11, 0.2)', borderRadius: '10px', padding: '12px', marginBottom: '16px', fontSize: '0.8rem', color: '#fde68a' }}>
+                  <div style={{ background: 'rgba(245, 158, 11, 0.07)', border: '1px solid rgba(245, 158, 11, 0.2)', borderRadius: '10px', padding: '12px', marginBottom: '16px', fontSize: '0.8rem', color: '#fde68a' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 600, marginBottom: '4px' }}>
                       <ShieldAlert size={15} /> Sealed Secret Ballot
                     </div>
                     Tally is cryptographically hidden until Reveal Phase. Commit your vote with a salt blinding factor.
                     {prop.overriddenCount ? (
-                      <div style={{ marginTop: '6px', color: '#60a5fa', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <div style={{ marginTop: '6px', color: '#e4e4e7', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
                         <KeyRound size={13} /> MACI Anti-Coercion: Overridden {prop.overriddenCount} time(s)
                       </div>
                     ) : null}
@@ -276,12 +276,12 @@ export const GovernanceView: React.FC = () => {
 
                 {/* Quadratic Votes Tally Bar */}
                 {liveState !== 'CommitPhase' && (
-                  <div style={{ marginBottom: '18px', background: 'rgba(15, 23, 42, 0.5)', padding: '14px', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                  <div style={{ marginBottom: '18px', background: 'rgba(24, 24, 28, 0.6)', padding: '14px', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.06)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', marginBottom: '6px' }}>
                       <span style={{ color: '#34d399', fontWeight: 600 }}>For: {prop.forVotesSqrt} √votes</span>
                       <span style={{ color: '#f43f5e', fontWeight: 600 }}>Against: {prop.againstVotesSqrt} √votes</span>
                     </div>
-                    <div style={{ width: '100%', height: '8px', background: '#334155', borderRadius: '9999px', overflow: 'hidden', display: 'flex' }}>
+                    <div style={{ width: '100%', height: '8px', background: '#27272a', borderRadius: '9999px', overflow: 'hidden', display: 'flex' }}>
                       <div style={{ width: `${forPct}%`, background: 'linear-gradient(90deg, #059669 0%, #10b981 100%)', transition: 'width 0.5s ease' }}></div>
                       <div style={{ width: `${100 - forPct}%`, background: 'linear-gradient(90deg, #e11d48 0%, #f43f5e 100%)', transition: 'width 0.5s ease' }}></div>
                     </div>
@@ -316,7 +316,7 @@ export const GovernanceView: React.FC = () => {
                           id={`override-maci-btn-${prop.id}`}
                           className="btn btn-secondary"
                           onClick={() => openCommitModal(prop, true)}
-                          style={{ fontSize: '0.8rem', padding: '8px 10px', color: '#a5b4fc', borderColor: 'rgba(99, 102, 241, 0.3)' }}
+                          style={{ fontSize: '0.8rem', padding: '8px 10px', color: '#f4f4f5', borderColor: 'rgba(255, 255, 255, 0.2)' }}
                           title="MACI Anti-Coercion: quietly replace a coerced ballot with a fresh choice"
                         >
                           <RefreshCw size={13} /> MACI Override
@@ -361,22 +361,22 @@ export const GovernanceView: React.FC = () => {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <TrendingUp size={20} color="#60a5fa" />
+              <TrendingUp size={20} color="#f4f4f5" />
               <h2 style={{ fontSize: '1.35rem', fontWeight: 700 }}>Continuous Conviction Signaling Engine</h2>
             </div>
-            <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '4px' }}>
+            <p style={{ color: '#a1a1aa', fontSize: '0.85rem', marginTop: '4px' }}>
               Conviction increases asymptotically over time as governance participants keep tokens staked, reflecting persistent preference without discrete voting deadlines.
             </p>
           </div>
-          <div className="badge badge-blue" style={{ fontSize: '0.85rem' }}>
+          <div className="badge badge-neutral" style={{ fontSize: '0.85rem' }}>
             Accumulated Conviction: {convictionScore}
           </div>
         </div>
 
-        <div style={{ background: 'rgba(10, 14, 25, 0.8)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '12px', padding: '20px' }}>
+        <div style={{ background: 'rgba(18, 18, 22, 0.8)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '12px', padding: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
             <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Decentralized Storage Node Subsidies Initiative</span>
-            <span className="mono" style={{ color: '#60a5fa', fontSize: '0.85rem' }}>Staked: {convictionStake} Credits</span>
+            <span className="mono" style={{ color: '#f4f4f5', fontSize: '0.85rem' }}>Staked: {convictionStake} Credits</span>
           </div>
 
           <input
@@ -389,10 +389,10 @@ export const GovernanceView: React.FC = () => {
               setConvictionStake(val);
               setConvictionScore(Math.floor(val * 48.5));
             }}
-            style={{ width: '100%', accentColor: '#3b82f6', height: '6px', cursor: 'pointer', marginBottom: '12px' }}
+            style={{ width: '100%', accentColor: '#ffffff', height: '6px', cursor: 'pointer', marginBottom: '12px' }}
           />
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#64748b' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#71717a' }}>
             <span>Conviction Decay Rate: α = 0.95</span>
             <span>Threshold for Autonomous Grant Release: 5,000 Conviction</span>
           </div>
@@ -405,21 +405,21 @@ export const GovernanceView: React.FC = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ padding: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Lock size={20} color="#60a5fa" />
+                <Lock size={20} color="#f4f4f5" />
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>
                   {isOverrideMode ? 'MACI Anti-Coercion Ballot Overwrite' : 'Commit Secret Ballot'}
                 </h3>
               </div>
-              <button onClick={() => setCommitModalProp(null)} style={{ background: 'transparent', border: 'none', color: '#64748b', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>
+              <button onClick={() => setCommitModalProp(null)} style={{ background: 'transparent', border: 'none', color: '#71717a', fontSize: '1.2rem', cursor: 'pointer' }}>✕</button>
             </div>
 
             {isOverrideMode && (
-              <div style={{ background: 'rgba(99, 102, 241, 0.12)', border: '1px solid rgba(99, 102, 241, 0.28)', borderRadius: '8px', padding: '12px', marginBottom: '16px', fontSize: '0.825rem', color: '#e0e7ff' }}>
+              <div style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.15)', borderRadius: '8px', padding: '12px', marginBottom: '16px', fontSize: '0.825rem', color: '#e4e4e7' }}>
                 <strong>MACI Guarantee:</strong> If someone bribed or coerced your previous ballot, submit your authentic vote now with a new blinding salt. The smart contract overwrites your commitment with zero on-chain leakage!
               </div>
             )}
 
-            <div style={{ fontSize: '0.9rem', color: '#94a3b8', marginBottom: '18px' }}>
+            <div style={{ fontSize: '0.9rem', color: '#a1a1aa', marginBottom: '18px' }}>
               Proposal: <strong style={{ color: '#f8fafc' }}>AIP-{commitModalProp.id}: {commitModalProp.title}</strong>
             </div>
 
@@ -428,9 +428,9 @@ export const GovernanceView: React.FC = () => {
               <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '8px' }}>Vote Choice</label>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
                 {[
-                  { id: 1, label: 'For', color: '#10b981' },
+                  { id: 1, label: 'For', color: '#4ade80' },
                   { id: 0, label: 'Against', color: '#f43f5e' },
-                  { id: 2, label: 'Abstain', color: '#94a3b8' },
+                  { id: 2, label: 'Abstain', color: '#a1a1aa' },
                 ].map((c) => (
                   <button
                     key={c.id}
@@ -438,9 +438,9 @@ export const GovernanceView: React.FC = () => {
                     type="button"
                     onClick={() => setVoteChoice(c.id)}
                     style={{
-                      background: voteChoice === c.id ? `rgba(59, 130, 246, 0.16)` : 'rgba(14, 19, 31, 0.6)',
+                      background: voteChoice === c.id ? `rgba(255, 255, 255, 0.12)` : 'rgba(24, 24, 28, 0.6)',
                       border: voteChoice === c.id ? `2px solid ${c.color}` : '1px solid rgba(255, 255, 255, 0.1)',
-                      color: voteChoice === c.id ? '#ffffff' : '#94a3b8',
+                      color: voteChoice === c.id ? '#ffffff' : '#a1a1aa',
                       padding: '10px',
                       borderRadius: '8px',
                       fontWeight: 700,
@@ -457,7 +457,7 @@ export const GovernanceView: React.FC = () => {
             <div style={{ marginBottom: '16px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
                 <label style={{ fontSize: '0.85rem', fontWeight: 600 }}>Governance Credits to Allocate</label>
-                <span style={{ fontSize: '0.8rem', color: '#60a5fa' }}>Available: {currentPersona.credits} credits</span>
+                <span style={{ fontSize: '0.8rem', color: '#f4f4f5' }}>Available: {currentPersona.credits} credits</span>
               </div>
               <input
                 id="credits-input"
@@ -468,9 +468,9 @@ export const GovernanceView: React.FC = () => {
                 value={voteCredits}
                 onChange={(e) => setVoteCredits(Number(e.target.value))}
               />
-              <div style={{ marginTop: '8px', background: 'rgba(59, 130, 246, 0.08)', border: '1px solid rgba(59, 130, 246, 0.22)', padding: '10px 14px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+              <div style={{ marginTop: '8px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.12)', padding: '10px 14px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.85rem' }}>
                 <span>Quadratic Vote Weight:</span>
-                <strong style={{ color: '#60a5fa' }}>√({voteCredits}) = {calculateQuadraticPower(voteCredits)} effective votes</strong>
+                <strong style={{ color: '#ffffff' }}>√({voteCredits}) = {calculateQuadraticPower(voteCredits)} effective votes</strong>
               </div>
             </div>
 
@@ -481,7 +481,7 @@ export const GovernanceView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setBlindingSalt(generateBlindingSalt())}
-                  style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.78rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
+                  style={{ background: 'transparent', border: 'none', color: '#f4f4f5', fontSize: '0.78rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
                 >
                   <Sparkles size={12} /> Regenerate
                 </button>
@@ -495,7 +495,7 @@ export const GovernanceView: React.FC = () => {
             </div>
 
             {/* Computed Commitment Hash Preview */}
-            <div style={{ background: 'rgba(15, 23, 42, 0.7)', padding: '12px', borderRadius: '10px', marginBottom: '20px', fontSize: '0.8rem' }}>
+            <div style={{ background: 'rgba(24, 24, 28, 0.8)', padding: '12px', borderRadius: '10px', marginBottom: '20px', fontSize: '0.8rem', border: '1px solid rgba(255, 255, 255, 0.06)' }}>
               <div style={{ color: '#64748b', marginBottom: '4px' }}>On-Chain Commitment Hash (Sealed Ballot):</div>
               <div className="mono" style={{ color: '#34d399', wordBreak: 'break-all' }}>
                 {computeCommitment(commitModalProp.id, currentPersona.address, voteChoice, voteCredits, blindingSalt || '0x00')}

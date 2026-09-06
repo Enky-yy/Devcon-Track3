@@ -23,7 +23,7 @@ export const AppContent: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer style={{ borderTop: '1px solid var(--border-subtle)', background: 'rgba(6, 9, 19, 0.95)', padding: '24px', marginTop: '60px' }}>
+      <footer style={{ borderTop: '1px solid var(--border-subtle)', background: 'rgba(18, 18, 22, 0.95)', padding: '24px', marginTop: '60px' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px', fontSize: '0.85rem', color: '#94a3b8' }}>
           <div>
             <strong style={{ color: '#f8fafc' }}>Axiom Protocol</strong> — Hackathon Track 3: Decentralized Coordination Layers & Verifiable Governance

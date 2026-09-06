@@ -21,7 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
   ];
 
   return (
-    <header style={{ position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--border-subtle)', background: 'rgba(8, 11, 17, 0.92)' }}>
+    <header style={{ position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--border-subtle)', background: 'rgba(9, 9, 11, 0.95)' }}>
       {/* Toast Notification */}
       {toast && (
         <div
@@ -30,12 +30,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             top: 20,
             right: 20,
             zIndex: 99999,
-            background: toast.type === 'error' ? '#881337' : toast.type === 'info' ? '#1e3a8a' : '#064e3b',
-            border: `1px solid ${toast.type === 'error' ? '#f43f5e' : toast.type === 'info' ? '#60a5fa' : '#10b981'}`,
+            background: toast.type === 'error' ? '#271014' : toast.type === 'info' ? '#18181b' : '#0d2818',
+            border: `1px solid ${toast.type === 'error' ? '#f43f5e' : toast.type === 'info' ? 'rgba(255,255,255,0.25)' : '#22c55e'}`,
             color: '#ffffff',
             padding: '10px 18px',
-            borderRadius: '10px',
-            boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+            borderRadius: '8px',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.7)',
             display: 'flex',
             alignItems: 'center',
             gap: '10px',
@@ -50,14 +50,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       )}
 
       {/* Top Protocol Utility Bar */}
-      <div style={{ background: '#0a0e19', padding: '6px 24px', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.78rem', flexWrap: 'wrap', gap: '8px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#94a3b8' }}>
-          <span style={{ display: 'inline-block', width: '6px', height: '6px', borderRadius: '50%', background: '#10b981' }}></span>
-          <span style={{ fontWeight: 600, color: '#f1f5f9' }}>Axiom Protocol</span>
-          <span style={{ color: '#64748b' }}>•</span>
+      <div style={{ background: '#121215', padding: '6px 24px', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.78rem', flexWrap: 'wrap', gap: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#a1a1aa' }}>
+          <span style={{ display: 'inline-block', width: '6px', height: '6px', borderRadius: '50%', background: '#22c55e' }}></span>
+          <span style={{ fontWeight: 600, color: '#f4f4f5' }}>Axiom Protocol</span>
+          <span style={{ color: '#52525b' }}>•</span>
           <span>EVM Cancun</span>
-          <span style={{ color: '#64748b' }}>•</span>
-          <span className="mono" style={{ color: '#60a5fa' }}>Chain ID: 31337</span>
+          <span style={{ color: '#52525b' }}>•</span>
+          <span className="mono" style={{ color: '#e4e4e7' }}>Chain ID: 31337</span>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -65,9 +65,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             id="start-judge-tour-btn"
             onClick={() => setShowDemoModal(true)}
             style={{
-              background: 'rgba(59, 130, 246, 0.12)',
-              border: '1px solid rgba(59, 130, 246, 0.3)',
-              color: '#60a5fa',
+              background: 'rgba(255, 255, 255, 0.08)',
+              border: '1px solid rgba(255, 255, 255, 0.16)',
+              color: '#f4f4f5',
               padding: '3px 10px',
               borderRadius: '6px',
               fontSize: '0.75rem',
@@ -81,17 +81,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             <Play size={11} /> Simulate Protocol Run
           </button>
 
-          <span style={{ color: '#64748b' }}>Time Warp:</span>
+          <span style={{ color: '#71717a' }}>Time Warp:</span>
           <button
             onClick={() => fastForwardTime(600)}
-            style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#cbd5e1', padding: '3px 8px', borderRadius: '6px', fontSize: '0.72rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '3px' }}
+            style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#d4d4d8', padding: '3px 8px', borderRadius: '6px', fontSize: '0.72rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '3px' }}
             title="Fast forward EVM timestamp by 10 minutes"
           >
             <FastForward size={11} /> +10m
           </button>
           <button
             onClick={() => fastForwardTime(3600)}
-            style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#cbd5e1', padding: '3px 8px', borderRadius: '6px', fontSize: '0.72rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '3px' }}
+            style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', color: '#d4d4d8', padding: '3px 8px', borderRadius: '6px', fontSize: '0.72rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '3px' }}
             title="Fast forward EVM timestamp by 1 hour"
           >
             <FastForward size={11} /> +1h
@@ -103,20 +103,20 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap' }}>
         {/* Brand */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }} onClick={() => setActiveTab('governance')}>
-          <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#2563eb', border: '1px solid rgba(147, 197, 253, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Shield size={20} color="#ffffff" />
+          <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#f4f4f5', border: '1px solid rgba(255, 255, 255, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Shield size={20} color="#09090b" />
           </div>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="gradient-text" style={{ fontSize: '1.2rem', fontWeight: 800, letterSpacing: '-0.02em' }}>AXIOM</span>
-              <span className="badge badge-blue" style={{ fontSize: '0.625rem', padding: '2px 6px' }}>CORE</span>
+              <span className="badge badge-neutral" style={{ fontSize: '0.625rem', padding: '2px 6px' }}>CORE</span>
             </div>
-            <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Decentralized Coordination & Verifiable Governance</div>
+            <div style={{ fontSize: '0.72rem', color: '#71717a' }}>Decentralized Coordination & Verifiable Governance</div>
           </div>
         </div>
 
         {/* Navigation Tabs */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(14, 19, 31, 0.8)', padding: '4px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.07)' }}>
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(24, 24, 28, 0.8)', padding: '4px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
           {tabs.map((t) => {
             const isActive = activeTab === t.id;
             const TabIcon = t.Icon;
@@ -126,9 +126,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                 id={`tab-${t.id}`}
                 onClick={() => setActiveTab(t.id)}
                 style={{
-                  background: isActive ? 'rgba(59, 130, 246, 0.14)' : 'transparent',
-                  color: isActive ? '#60a5fa' : '#94a3b8',
-                  border: isActive ? '1px solid rgba(59, 130, 246, 0.3)' : '1px solid transparent',
+                  background: isActive ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
+                  color: isActive ? '#ffffff' : '#a1a1aa',
+                  border: isActive ? '1px solid rgba(255, 255, 255, 0.22)' : '1px solid transparent',
                   padding: '7px 12px',
                   borderRadius: '6px',
                   cursor: 'pointer',
@@ -149,8 +149,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 
         {/* Account Selector */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(14, 19, 31, 0.9)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', padding: '4px 6px', gap: '6px' }}>
-            <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 600, textTransform: 'uppercase', paddingLeft: '4px' }}>Account:</span>
+          <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(24, 24, 28, 0.9)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', padding: '4px 6px', gap: '6px' }}>
+            <span style={{ fontSize: '0.7rem', color: '#71717a', fontWeight: 600, textTransform: 'uppercase', paddingLeft: '4px' }}>Account:</span>
             {PRESET_PERSONAS.map((p) => {
               const isSelected = !isLiveWallet && currentPersona.id === p.id;
               return (
@@ -159,9 +159,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                   id={`persona-btn-${p.id}`}
                   onClick={() => setPersona(p)}
                   style={{
-                    background: isSelected ? 'rgba(59, 130, 246, 0.15)' : 'transparent',
-                    border: isSelected ? '1px solid #3b82f6' : '1px solid transparent',
-                    color: isSelected ? '#f8fafc' : '#94a3b8',
+                    background: isSelected ? 'rgba(255, 255, 255, 0.12)' : 'transparent',
+                    border: isSelected ? '1px solid rgba(255, 255, 255, 0.3)' : '1px solid transparent',
+                    color: isSelected ? '#ffffff' : '#a1a1aa',
                     padding: '3px 8px',
                     borderRadius: '6px',
                     fontSize: '0.75rem',
@@ -182,9 +182,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
               id="wallet-connect-btn"
               onClick={isLiveWallet ? disconnectInjectedWallet : connectInjectedWallet}
               style={{
-                background: isLiveWallet ? 'rgba(16, 185, 129, 0.15)' : 'rgba(255, 255, 255, 0.04)',
-                border: isLiveWallet ? '1px solid #10b981' : '1px solid rgba(255, 255, 255, 0.1)',
-                color: isLiveWallet ? '#34d399' : '#94a3b8',
+                background: isLiveWallet ? 'rgba(34, 197, 94, 0.15)' : 'rgba(255, 255, 255, 0.04)',
+                border: isLiveWallet ? '1px solid #22c55e' : '1px solid rgba(255, 255, 255, 0.1)',
+                color: isLiveWallet ? '#4ade80' : '#a1a1aa',
                 padding: '3px 8px',
                 borderRadius: '6px',
                 fontSize: '0.75rem',
@@ -203,17 +203,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       </div>
 
       {/* Account Info Details */}
-      <div style={{ background: 'rgba(10, 14, 25, 0.6)', padding: '5px 24px', borderTop: '1px solid rgba(255, 255, 255, 0.03)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem', color: '#94a3b8' }}>
+      <div style={{ background: 'rgba(18, 18, 22, 0.6)', padding: '5px 24px', borderTop: '1px solid rgba(255, 255, 255, 0.03)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem', color: '#a1a1aa' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <span className="mono" style={{ color: '#f8fafc' }}>{currentPersona.ens}</span>
+          <span className="mono" style={{ color: '#f4f4f5' }}>{currentPersona.ens}</span>
           <span>•</span>
           <span>{currentPersona.role}</span>
-          <span className="badge badge-indigo" style={{ fontSize: '0.625rem', padding: '1px 5px' }}>{currentPersona.badge}</span>
+          <span className="badge badge-neutral" style={{ fontSize: '0.625rem', padding: '1px 5px' }}>{currentPersona.badge}</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-          <span className="mono" style={{ color: '#64748b' }}>{currentPersona.address.slice(0, 8)}...{currentPersona.address.slice(-6)}</span>
-          <span>Balance: <strong style={{ color: '#f8fafc' }}>{currentPersona.balance}</strong></span>
-          <span>QV Balance: <strong style={{ color: '#60a5fa' }}>{currentPersona.credits} credits</strong></span>
+          <span className="mono" style={{ color: '#71717a' }}>{currentPersona.address.slice(0, 8)}...{currentPersona.address.slice(-6)}</span>
+          <span>Balance: <strong style={{ color: '#f4f4f5' }}>{currentPersona.balance}</strong></span>
+          <span>QV Balance: <strong style={{ color: '#f4f4f5' }}>{currentPersona.credits} credits</strong></span>
         </div>
       </div>
 

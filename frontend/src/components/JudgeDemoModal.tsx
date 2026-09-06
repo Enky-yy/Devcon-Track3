@@ -46,7 +46,7 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({ isOpen, onClose,
       <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ padding: '28px', maxWidth: '640px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#0284c7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#27272a', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
               <Play size={16} color="#ffffff" />
             </div>
             <div>
@@ -71,24 +71,24 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({ isOpen, onClose,
                   width: '30px',
                   height: '30px',
                   borderRadius: '50%',
-                  background: step > s.num ? '#059669' : step === s.num ? '#2563eb' : '#1e293b',
-                  color: '#ffffff',
+                  background: step > s.num ? '#059669' : step === s.num ? '#ffffff' : '#27272a',
+                  color: step === s.num ? '#09090b' : '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontWeight: 600,
+                  fontWeight: 700,
                   fontSize: '0.8rem',
                 }}
               >
                 {step > s.num ? <CheckCircle2 size={16} /> : s.num}
               </div>
-              <span style={{ fontSize: '0.72rem', color: step === s.num ? '#60a5fa' : '#94a3b8', marginTop: '4px', fontWeight: 500 }}>{s.label}</span>
+              <span style={{ fontSize: '0.72rem', color: step === s.num ? '#ffffff' : '#a1a1aa', marginTop: '4px', fontWeight: 500 }}>{s.label}</span>
             </div>
           ))}
         </div>
 
         {/* Step Content */}
-        <div style={{ background: 'rgba(10, 14, 25, 0.75)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '12px', padding: '16px', marginBottom: '20px' }}>
+        <div style={{ background: 'rgba(18, 18, 22, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '12px', padding: '16px', marginBottom: '20px' }}>
           {step === 1 && (
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
@@ -108,7 +108,7 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({ isOpen, onClose,
                 <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Commit Secret Ballot (0xresearcher.eth)</h4>
               </div>
               <p style={{ fontSize: '0.825rem', color: '#94a3b8', lineHeight: '1.5' }}>
-                Voter submits <code className="mono" style={{ color: '#60a5fa' }}>keccak256(proposalId, voter, choice, credits, salt)</code>. The choice remains concealed. If coerced, the voter can execute a MACI ballot overwrite before the commit window closes.
+                Voter submits <code className="mono" style={{ color: '#f4f4f5' }}>keccak256(proposalId, voter, choice, credits, salt)</code>. The choice remains concealed. If coerced, the voter can execute a MACI ballot overwrite before the commit window closes.
               </p>
             </div>
           )}
@@ -132,7 +132,7 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({ isOpen, onClose,
                 <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Milestone Escrow & Deliverable Release</h4>
               </div>
               <p style={{ fontSize: '0.825rem', color: '#94a3b8', lineHeight: '1.5' }}>
-                The contributor submits an artifact deliverable hash (<code className="mono" style={{ color: '#60a5fa' }}>sha256:7f83b165...</code>). The client verifies the output and releases the milestone payout directly from escrow.
+                The contributor submits an artifact deliverable hash (<code className="mono" style={{ color: '#f4f4f5' }}>sha256:7f83b165...</code>). The client verifies the output and releases the milestone payout directly from escrow.
               </p>
             </div>
           )}
