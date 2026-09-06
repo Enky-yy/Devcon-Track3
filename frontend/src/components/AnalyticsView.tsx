@@ -68,7 +68,7 @@ export const AnalyticsView: React.FC = () => {
               <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)', color: '#94a3b8', textAlign: 'left' }}>
                 <th style={{ padding: '12px 16px' }}>Vulnerability Vector</th>
                 <th style={{ padding: '12px 16px' }}>Status Quo (Snapshot / Discord)</th>
-                <th style={{ padding: '12px 16px', color: '#38bdf8' }}>Axiom Protocol Architecture</th>
+                <th style={{ padding: '12px 16px', color: '#60a5fa' }}>Axiom Protocol Architecture</th>
                 <th style={{ padding: '12px 16px' }}>Guarantee</th>
               </tr>
             </thead>
@@ -109,7 +109,7 @@ export const AnalyticsView: React.FC = () => {
             </div>
           </div>
 
-          <div style={{ background: 'rgba(16, 185, 129, 0.08)', border: '1px solid rgba(16, 185, 129, 0.3)', borderRadius: '12px', padding: '16px' }}>
+          <div style={{ background: 'rgba(16, 185, 129, 0.08)', border: '1px solid rgba(16, 185, 129, 0.28)', borderRadius: '12px', padding: '16px' }}>
             <div style={{ color: '#10b981', fontWeight: 700, marginBottom: '6px' }}>Axiom Quadratic Voting (Power = √Credits)</div>
             <div style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '10px' }}>
               1 Whale with 400 credits: √400 = <strong>20 votes</strong><br/>
@@ -125,7 +125,7 @@ export const AnalyticsView: React.FC = () => {
       {/* Verified Smart Contract Deployments */}
       <div className="glass-card" style={{ padding: '24px' }}>
         <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <Terminal size={20} color="#38bdf8" /> Verified Deployed Smart Contracts (Localhost / Testnet)
+          <Terminal size={20} color="#60a5fa" /> Verified Deployed Smart Contracts (Localhost / Testnet)
         </h3>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '14px' }}>
@@ -133,16 +133,16 @@ export const AnalyticsView: React.FC = () => {
             <div
               key={name}
               style={{
-                background: 'rgba(11, 17, 32, 0.7)',
+                background: 'rgba(10, 14, 25, 0.75)',
                 border: '1px solid rgba(255, 255, 255, 0.06)',
-                borderRadius: '12px',
+                borderRadius: '10px',
                 padding: '14px',
               }}
             >
               <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#f8fafc', marginBottom: '4px' }}>
                 {name}
               </div>
-              <div className="mono" style={{ fontSize: '0.78rem', color: '#38bdf8', wordBreak: 'break-all' }}>
+              <div className="mono" style={{ fontSize: '0.78rem', color: '#60a5fa', wordBreak: 'break-all' }}>
                 {addr}
               </div>
               <div style={{ fontSize: '0.72rem', color: '#10b981', marginTop: '6px', display: 'flex', alignItems: 'center', gap: '4px' }}>

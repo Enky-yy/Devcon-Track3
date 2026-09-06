@@ -202,12 +202,12 @@ export const GovernanceView: React.FC = () => {
         </div>
 
         {/* Live Mathematical Formula Banner */}
-        <div style={{ marginTop: '20px', background: 'rgba(15, 23, 42, 0.7)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '12px', padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '15px' }}>
+        <div style={{ marginTop: '20px', background: 'rgba(14, 19, 31, 0.8)', border: '1px solid rgba(255, 255, 255, 0.07)', borderRadius: '10px', padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '15px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
             <span style={{ fontSize: '1.2rem' }}>📐</span>
             <div>
               <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#e2e8f0' }}>Quadratic Voting & MACI Math in EVM:</div>
-              <div className="mono" style={{ fontSize: '0.8rem', color: '#38bdf8' }}>
+              <div className="mono" style={{ fontSize: '0.8rem', color: '#60a5fa' }}>
                 EffectiveVotes = ⌊√Tokens⌋ &nbsp;|&nbsp; 4 voters × 100 credits = 40 votes &gt; 1 whale × 400 credits = 20 votes!
               </div>
             </div>
@@ -233,8 +233,8 @@ export const GovernanceView: React.FC = () => {
                 {/* Header info */}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span className="mono" style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem' }}>AIP-{prop.id}</span>
-                    <span className="badge badge-purple" style={{ fontSize: '0.7rem' }}>{prop.category}</span>
+                    <span className="mono" style={{ color: '#60a5fa', fontWeight: 700, fontSize: '0.85rem' }}>AIP-{prop.id}</span>
+                    <span className="badge badge-indigo" style={{ fontSize: '0.7rem' }}>{prop.category}</span>
                   </div>
 
                   {liveState === 'CommitPhase' && (
@@ -267,7 +267,7 @@ export const GovernanceView: React.FC = () => {
                     </div>
                     Tally is cryptographically hidden until Reveal Phase. Commit your vote with a salt blinding factor.
                     {prop.overriddenCount ? (
-                      <div style={{ marginTop: '6px', color: '#38bdf8', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <div style={{ marginTop: '6px', color: '#60a5fa', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
                         <KeyRound size={13} /> MACI Anti-Coercion: Overridden {prop.overriddenCount} time(s)
                       </div>
                     ) : null}
@@ -316,7 +316,7 @@ export const GovernanceView: React.FC = () => {
                           id={`override-maci-btn-${prop.id}`}
                           className="btn btn-secondary"
                           onClick={() => openCommitModal(prop, true)}
-                          style={{ fontSize: '0.8rem', padding: '8px 10px', color: '#c084fc', borderColor: 'rgba(168, 85, 247, 0.3)' }}
+                          style={{ fontSize: '0.8rem', padding: '8px 10px', color: '#a5b4fc', borderColor: 'rgba(99, 102, 241, 0.3)' }}
                           title="MACI Anti-Coercion: quietly replace a coerced ballot with a fresh choice"
                         >
                           <RefreshCw size={13} /> MACI Override
@@ -356,27 +356,27 @@ export const GovernanceView: React.FC = () => {
         })}
       </div>
 
-      {/* Conviction Signaling Live Visualizer */}
+      {/* Conviction Voting Engine Section */}
       <div className="glass-card" style={{ padding: '28px', marginBottom: '28px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <TrendingUp size={20} color="#38bdf8" />
+              <TrendingUp size={20} color="#60a5fa" />
               <h2 style={{ fontSize: '1.35rem', fontWeight: 700 }}>Continuous Conviction Signaling Engine</h2>
             </div>
             <p style={{ color: '#94a3b8', fontSize: '0.85rem', marginTop: '4px' }}>
               Conviction increases asymptotically over time as governance participants keep tokens staked, reflecting persistent preference without discrete voting deadlines.
             </p>
           </div>
-          <div className="badge badge-cyan" style={{ fontSize: '0.85rem' }}>
+          <div className="badge badge-blue" style={{ fontSize: '0.85rem' }}>
             Accumulated Conviction: {convictionScore}
           </div>
         </div>
 
-        <div style={{ background: 'rgba(11, 17, 32, 0.8)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '14px', padding: '20px' }}>
+        <div style={{ background: 'rgba(10, 14, 25, 0.8)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '12px', padding: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
             <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Decentralized Storage Node Subsidies Initiative</span>
-            <span className="mono" style={{ color: '#38bdf8', fontSize: '0.85rem' }}>Staked: {convictionStake} Credits</span>
+            <span className="mono" style={{ color: '#60a5fa', fontSize: '0.85rem' }}>Staked: {convictionStake} Credits</span>
           </div>
 
           <input
@@ -389,7 +389,7 @@ export const GovernanceView: React.FC = () => {
               setConvictionStake(val);
               setConvictionScore(Math.floor(val * 48.5));
             }}
-            style={{ width: '100%', accentColor: '#38bdf8', height: '6px', cursor: 'pointer', marginBottom: '12px' }}
+            style={{ width: '100%', accentColor: '#3b82f6', height: '6px', cursor: 'pointer', marginBottom: '12px' }}
           />
 
           <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', color: '#64748b' }}>
@@ -405,7 +405,7 @@ export const GovernanceView: React.FC = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ padding: '28px' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Lock size={20} color="#38bdf8" />
+                <Lock size={20} color="#60a5fa" />
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>
                   {isOverrideMode ? 'MACI Anti-Coercion Ballot Overwrite' : 'Commit Secret Ballot'}
                 </h3>
@@ -414,7 +414,7 @@ export const GovernanceView: React.FC = () => {
             </div>
 
             {isOverrideMode && (
-              <div style={{ background: 'rgba(168, 85, 247, 0.12)', border: '1px solid rgba(168, 85, 247, 0.3)', borderRadius: '10px', padding: '12px', marginBottom: '16px', fontSize: '0.825rem', color: '#e9d5ff' }}>
+              <div style={{ background: 'rgba(99, 102, 241, 0.12)', border: '1px solid rgba(99, 102, 241, 0.28)', borderRadius: '8px', padding: '12px', marginBottom: '16px', fontSize: '0.825rem', color: '#e0e7ff' }}>
                 <strong>MACI Guarantee:</strong> If someone bribed or coerced your previous ballot, submit your authentic vote now with a new blinding salt. The smart contract overwrites your commitment with zero on-chain leakage!
               </div>
             )}
@@ -438,11 +438,11 @@ export const GovernanceView: React.FC = () => {
                     type="button"
                     onClick={() => setVoteChoice(c.id)}
                     style={{
-                      background: voteChoice === c.id ? `rgba(56, 189, 248, 0.2)` : 'rgba(15, 23, 42, 0.6)',
+                      background: voteChoice === c.id ? `rgba(59, 130, 246, 0.16)` : 'rgba(14, 19, 31, 0.6)',
                       border: voteChoice === c.id ? `2px solid ${c.color}` : '1px solid rgba(255, 255, 255, 0.1)',
                       color: voteChoice === c.id ? '#ffffff' : '#94a3b8',
                       padding: '10px',
-                      borderRadius: '10px',
+                      borderRadius: '8px',
                       fontWeight: 700,
                       cursor: 'pointer',
                     }}
@@ -457,7 +457,7 @@ export const GovernanceView: React.FC = () => {
             <div style={{ marginBottom: '16px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
                 <label style={{ fontSize: '0.85rem', fontWeight: 600 }}>Governance Credits to Allocate</label>
-                <span style={{ fontSize: '0.8rem', color: '#38bdf8' }}>Available: {currentPersona.credits} credits</span>
+                <span style={{ fontSize: '0.8rem', color: '#60a5fa' }}>Available: {currentPersona.credits} credits</span>
               </div>
               <input
                 id="credits-input"
@@ -468,9 +468,9 @@ export const GovernanceView: React.FC = () => {
                 value={voteCredits}
                 onChange={(e) => setVoteCredits(Number(e.target.value))}
               />
-              <div style={{ marginTop: '8px', background: 'rgba(56, 189, 248, 0.1)', border: '1px solid rgba(56, 189, 248, 0.2)', padding: '10px 14px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+              <div style={{ marginTop: '8px', background: 'rgba(59, 130, 246, 0.08)', border: '1px solid rgba(59, 130, 246, 0.22)', padding: '10px 14px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.85rem' }}>
                 <span>Quadratic Vote Weight:</span>
-                <strong style={{ color: '#38bdf8' }}>√({voteCredits}) = {calculateQuadraticPower(voteCredits)} effective votes</strong>
+                <strong style={{ color: '#60a5fa' }}>√({voteCredits}) = {calculateQuadraticPower(voteCredits)} effective votes</strong>
               </div>
             </div>
 
@@ -481,7 +481,7 @@ export const GovernanceView: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setBlindingSalt(generateBlindingSalt())}
-                  style={{ background: 'transparent', border: 'none', color: '#38bdf8', fontSize: '0.78rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
+                  style={{ background: 'transparent', border: 'none', color: '#60a5fa', fontSize: '0.78rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px' }}
                 >
                   <Sparkles size={12} /> Regenerate
                 </button>

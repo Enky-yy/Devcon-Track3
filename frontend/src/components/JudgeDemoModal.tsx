@@ -71,7 +71,7 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({ isOpen, onClose,
                   width: '30px',
                   height: '30px',
                   borderRadius: '50%',
-                  background: step > s.num ? '#059669' : step === s.num ? '#0284c7' : '#1e293b',
+                  background: step > s.num ? '#059669' : step === s.num ? '#2563eb' : '#1e293b',
                   color: '#ffffff',
                   display: 'flex',
                   alignItems: 'center',
@@ -82,17 +82,17 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({ isOpen, onClose,
               >
                 {step > s.num ? <CheckCircle2 size={16} /> : s.num}
               </div>
-              <span style={{ fontSize: '0.72rem', color: step === s.num ? '#38bdf8' : '#94a3b8', marginTop: '4px', fontWeight: 500 }}>{s.label}</span>
+              <span style={{ fontSize: '0.72rem', color: step === s.num ? '#60a5fa' : '#94a3b8', marginTop: '4px', fontWeight: 500 }}>{s.label}</span>
             </div>
           ))}
         </div>
 
         {/* Step Content */}
-        <div style={{ background: 'rgba(11, 17, 32, 0.7)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '12px', padding: '16px', marginBottom: '20px' }}>
+        <div style={{ background: 'rgba(10, 14, 25, 0.75)', border: '1px solid rgba(255, 255, 255, 0.06)', borderRadius: '12px', padding: '16px', marginBottom: '20px' }}>
           {step === 1 && (
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-                <span className="badge badge-cyan" style={{ fontSize: '0.65rem' }}>Step 1</span>
+                <span className="badge badge-blue" style={{ fontSize: '0.65rem' }}>Step 1</span>
                 <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Proposal Creation (treasury.dao.eth)</h4>
               </div>
               <p style={{ fontSize: '0.825rem', color: '#94a3b8', lineHeight: '1.5' }}>
@@ -104,11 +104,11 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({ isOpen, onClose,
           {step === 2 && (
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-                <span className="badge badge-purple" style={{ fontSize: '0.65rem' }}>Step 2</span>
+                <span className="badge badge-indigo" style={{ fontSize: '0.65rem' }}>Step 2</span>
                 <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Commit Secret Ballot (0xresearcher.eth)</h4>
               </div>
               <p style={{ fontSize: '0.825rem', color: '#94a3b8', lineHeight: '1.5' }}>
-                Voter submits <code className="mono" style={{ color: '#38bdf8' }}>keccak256(proposalId, voter, choice, credits, salt)</code>. The choice remains concealed. If coerced, the voter can execute a MACI ballot overwrite before the commit window closes.
+                Voter submits <code className="mono" style={{ color: '#60a5fa' }}>keccak256(proposalId, voter, choice, credits, salt)</code>. The choice remains concealed. If coerced, the voter can execute a MACI ballot overwrite before the commit window closes.
               </p>
             </div>
           )}
@@ -128,11 +128,11 @@ export const JudgeDemoModal: React.FC<JudgeDemoModalProps> = ({ isOpen, onClose,
           {step === 4 && (
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-                <span className="badge badge-cyan" style={{ fontSize: '0.65rem' }}>Step 4</span>
+                <span className="badge badge-blue" style={{ fontSize: '0.65rem' }}>Step 4</span>
                 <h4 style={{ fontSize: '0.95rem', fontWeight: 600 }}>Milestone Escrow & Deliverable Release</h4>
               </div>
               <p style={{ fontSize: '0.825rem', color: '#94a3b8', lineHeight: '1.5' }}>
-                The contributor submits an artifact deliverable hash (<code className="mono" style={{ color: '#38bdf8' }}>sha256:7f83b165...</code>). The client verifies the output and releases the milestone payout directly from escrow.
+                The contributor submits an artifact deliverable hash (<code className="mono" style={{ color: '#60a5fa' }}>sha256:7f83b165...</code>). The client verifies the output and releases the milestone payout directly from escrow.
               </p>
             </div>
           )}

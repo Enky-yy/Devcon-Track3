@@ -21,7 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
   ];
 
   return (
-    <header style={{ position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--border-subtle)', background: 'rgba(6, 9, 19, 0.9)' }}>
+    <header style={{ position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(16px)', borderBottom: '1px solid var(--border-subtle)', background: 'rgba(8, 11, 17, 0.92)' }}>
       {/* Toast Notification */}
       {toast && (
         <div
@@ -30,8 +30,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             top: 20,
             right: 20,
             zIndex: 99999,
-            background: toast.type === 'error' ? '#881337' : toast.type === 'info' ? '#0c4a6e' : '#064e3b',
-            border: `1px solid ${toast.type === 'error' ? '#f43f5e' : toast.type === 'info' ? '#38bdf8' : '#10b981'}`,
+            background: toast.type === 'error' ? '#881337' : toast.type === 'info' ? '#1e3a8a' : '#064e3b',
+            border: `1px solid ${toast.type === 'error' ? '#f43f5e' : toast.type === 'info' ? '#60a5fa' : '#10b981'}`,
             color: '#ffffff',
             padding: '10px 18px',
             borderRadius: '10px',
@@ -50,14 +50,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       )}
 
       {/* Top Protocol Utility Bar */}
-      <div style={{ background: '#0b1120', padding: '6px 24px', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.78rem', flexWrap: 'wrap', gap: '8px' }}>
+      <div style={{ background: '#0a0e19', padding: '6px 24px', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.78rem', flexWrap: 'wrap', gap: '8px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#94a3b8' }}>
           <span style={{ display: 'inline-block', width: '6px', height: '6px', borderRadius: '50%', background: '#10b981' }}></span>
           <span style={{ fontWeight: 600, color: '#f1f5f9' }}>Axiom Protocol</span>
           <span style={{ color: '#64748b' }}>•</span>
           <span>EVM Cancun</span>
           <span style={{ color: '#64748b' }}>•</span>
-          <span className="mono" style={{ color: '#38bdf8' }}>Chain ID: 31337</span>
+          <span className="mono" style={{ color: '#60a5fa' }}>Chain ID: 31337</span>
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -65,9 +65,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             id="start-judge-tour-btn"
             onClick={() => setShowDemoModal(true)}
             style={{
-              background: 'rgba(56, 189, 248, 0.15)',
-              border: '1px solid rgba(56, 189, 248, 0.35)',
-              color: '#38bdf8',
+              background: 'rgba(59, 130, 246, 0.12)',
+              border: '1px solid rgba(59, 130, 246, 0.3)',
+              color: '#60a5fa',
               padding: '3px 10px',
               borderRadius: '6px',
               fontSize: '0.75rem',
@@ -103,20 +103,20 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap' }}>
         {/* Brand */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }} onClick={() => setActiveTab('governance')}>
-          <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#0284c7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: '#2563eb', border: '1px solid rgba(147, 197, 253, 0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Shield size={20} color="#ffffff" />
           </div>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '1.2rem', fontWeight: 800, letterSpacing: '-0.02em' }}>AXIOM</span>
-              <span className="badge badge-cyan" style={{ fontSize: '0.625rem', padding: '2px 6px' }}>CORE</span>
+              <span className="gradient-text" style={{ fontSize: '1.2rem', fontWeight: 800, letterSpacing: '-0.02em' }}>AXIOM</span>
+              <span className="badge badge-blue" style={{ fontSize: '0.625rem', padding: '2px 6px' }}>CORE</span>
             </div>
             <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Decentralized Coordination & Verifiable Governance</div>
           </div>
         </div>
 
         {/* Navigation Tabs */}
-        <nav style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(15, 23, 42, 0.7)', padding: '4px', borderRadius: '10px', border: '1px solid rgba(255, 255, 255, 0.06)' }}>
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(14, 19, 31, 0.8)', padding: '4px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.07)' }}>
           {tabs.map((t) => {
             const isActive = activeTab === t.id;
             const TabIcon = t.Icon;
@@ -126,11 +126,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                 id={`tab-${t.id}`}
                 onClick={() => setActiveTab(t.id)}
                 style={{
-                  background: isActive ? 'rgba(56, 189, 248, 0.12)' : 'transparent',
-                  color: isActive ? '#38bdf8' : '#94a3b8',
-                  border: isActive ? '1px solid rgba(56, 189, 248, 0.25)' : '1px solid transparent',
+                  background: isActive ? 'rgba(59, 130, 246, 0.14)' : 'transparent',
+                  color: isActive ? '#60a5fa' : '#94a3b8',
+                  border: isActive ? '1px solid rgba(59, 130, 246, 0.3)' : '1px solid transparent',
                   padding: '7px 12px',
-                  borderRadius: '7px',
+                  borderRadius: '6px',
                   cursor: 'pointer',
                   fontWeight: 600,
                   fontSize: '0.825rem',
@@ -149,7 +149,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 
         {/* Account Selector */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '10px', padding: '4px 6px', gap: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', background: 'rgba(14, 19, 31, 0.9)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', padding: '4px 6px', gap: '6px' }}>
             <span style={{ fontSize: '0.7rem', color: '#64748b', fontWeight: 600, textTransform: 'uppercase', paddingLeft: '4px' }}>Account:</span>
             {PRESET_PERSONAS.map((p) => {
               const isSelected = !isLiveWallet && currentPersona.id === p.id;
@@ -159,8 +159,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                   id={`persona-btn-${p.id}`}
                   onClick={() => setPersona(p)}
                   style={{
-                    background: isSelected ? 'rgba(56, 189, 248, 0.15)' : 'transparent',
-                    border: isSelected ? '1px solid #38bdf8' : '1px solid transparent',
+                    background: isSelected ? 'rgba(59, 130, 246, 0.15)' : 'transparent',
+                    border: isSelected ? '1px solid #3b82f6' : '1px solid transparent',
                     color: isSelected ? '#f8fafc' : '#94a3b8',
                     padding: '3px 8px',
                     borderRadius: '6px',
@@ -203,17 +203,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       </div>
 
       {/* Account Info Details */}
-      <div style={{ background: 'rgba(11, 17, 32, 0.5)', padding: '5px 24px', borderTop: '1px solid rgba(255, 255, 255, 0.03)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem', color: '#94a3b8' }}>
+      <div style={{ background: 'rgba(10, 14, 25, 0.6)', padding: '5px 24px', borderTop: '1px solid rgba(255, 255, 255, 0.03)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem', color: '#94a3b8' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <span className="mono" style={{ color: '#f8fafc' }}>{currentPersona.ens}</span>
           <span>•</span>
           <span>{currentPersona.role}</span>
-          <span className="badge badge-purple" style={{ fontSize: '0.625rem', padding: '1px 5px' }}>{currentPersona.badge}</span>
+          <span className="badge badge-indigo" style={{ fontSize: '0.625rem', padding: '1px 5px' }}>{currentPersona.badge}</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
           <span className="mono" style={{ color: '#64748b' }}>{currentPersona.address.slice(0, 8)}...{currentPersona.address.slice(-6)}</span>
           <span>Balance: <strong style={{ color: '#f8fafc' }}>{currentPersona.balance}</strong></span>
-          <span>QV Balance: <strong style={{ color: '#38bdf8' }}>{currentPersona.credits} credits</strong></span>
+          <span>QV Balance: <strong style={{ color: '#60a5fa' }}>{currentPersona.credits} credits</strong></span>
         </div>
       </div>
 
