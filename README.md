@@ -2,14 +2,14 @@
 
 **Track Applied For:** Track 3: Decentralized Coordination Layers & Verifiable Governance  
 **Team Name:** Axiom Collective  
-**Team Members:** Enky-yy (Lead / Smart Contracts & Full-Stack), [Member 2], [Member 3], [Member 4]  
+**Team Members:** Enky-yy 
 **GitHub Repository:** https://github.com/Enky-yy/Devcon-Track3  
 **Live Demo / Deployed Contract:** Local: `http://localhost:5173` | Local Testnet Deployments:
 - `AxiomGovernance`: `0x5FbDB2315678afecb367f032d93F642f64180aa3`
 - `AxiomEscrowBounties`: `0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512`
 - `AxiomProvenanceRegistry`: `0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0`
 - `AxiomTransparencyLog`: `0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9`  
-**Demo Video:** [Loom / YouTube Link (max 2 mins)]  
+<!--**Demo Video:** [Loom / YouTube Link (max 2 mins)]  -->
 
 ---
 
